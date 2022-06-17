@@ -17,28 +17,31 @@
     <?php
       $code = isset($_GET['code']) ? $_GET['code'] : '';
 
-      $ch = curl_init();
-      $arr = [
-        'client_id'=> 'FHBGFIWS2BVFJ4L9BMGVPN0WOOU89R0J',
-        'client_secret'=> 'AOPFWR6JNUIDQ3P33N1TDFTYSSX67DWS7OXY1GJT06MF7SAWO6PO5SXZKRWMZCLV',
-        'code'=> isset($code) ? $code : ''
-      ];
+      function getAccessToken ($code) {
+        $ch = curl_init();
+        $arr = [
+          'client_id'=> 'FHBGFIWS2BVFJ4L9BMGVPN0WOOU89R0J',
+          'client_secret'=> 'AOPFWR6JNUIDQ3P33N1TDFTYSSX67DWS7OXY1GJT06MF7SAWO6PO5SXZKRWMZCLV',
+          'code'=> isset($code) ? $code : ''
+        ];
+  
+        $data = http_build_query($arr);
+        curl_setopt($ch, CURLOPT_URL, "https://app.clickup.com/api/v2/oauth/token");
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+  
+        $res = curl_exec($ch);
+  
+        if(curl_errno($ch)) echo curl_error($ch);
+        else $decoded = json_decode($res, true);
+        if(isset($decoded['access_token'])) var_dump($decoded);
+  
+        curl_close($ch);
+      }
 
-      $data = http_build_query($arr);
-      curl_setopt($ch, CURLOPT_URL, "https://app.clickup.com/api/v2/oauth/token");
-      curl_setopt($ch, CURLOPT_POST, true);
-      curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-      curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+      $token = getAccessToken($code);
 
-      $res = curl_exec($ch);
-
-      if(curl_errno($ch)) echo curl_error($ch);
-      else $decoded = json_decode($res, true);
-      if(isset($decoded['access_token'])) var_dump($decoded);
-
-      
-
-      curl_close($ch);
     ?>
 </body>
 </html>
