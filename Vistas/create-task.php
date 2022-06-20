@@ -19,7 +19,11 @@
     <form action="create" method="POST">
         <label>Nombre de la tarea</label>
         <input type="text" name="name">
-        <input type="submit" name="submit">
+        <label>Prioridad</label>
+        <input type="number" name="priority">
+        <label>Descripción</label>
+        <textarea name="description"></textarea>
+        <input type="submit">
     </form>
 </body>
 </html>

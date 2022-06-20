@@ -11,7 +11,6 @@
 
         public function create() {
             require_once './Vistas/create-task.php';
-            echo $data;
             $ch = curl_init();
             curl_setopt($ch, CURLOPT_URL,"https://api.clickup.com/api/v2/list/198432982/task");
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
@@ -26,9 +25,10 @@
             "Content-Type: application/json"
             ));
 
-            $response = curl_exec($ch);
+            curl_exec($ch);
             curl_close($ch);
 
+            header('Location: index');
         }
      }
 ?>
