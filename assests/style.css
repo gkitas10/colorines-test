@@ -5,6 +5,15 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+img {
+    max-width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
 .login {
     display: flex;
     width: 100%;
@@ -70,3 +79,43 @@ textarea {
     font-size: 1rem;
     cursor: pointer;
 }
+
+/*CreatedAlert*/
+.created-task {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 4em;
+
+}
+
+.cont {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    
+    align-items: center;
+}
+
+.alert {
+    font-size: 1.2rem;
+    margin-bottom: .5em;
+}
+
+.back-cont {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+}
+
+.arrow {
+    display: flex;
+    align-items: center;
+    background-color: #61DAFB;
+    color: #282C34;
+    text-align: center;
+    padding: .5em 1.5em;
+    border-radius: 6px;
+}
+
