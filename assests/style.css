@@ -1,0 +1,72 @@
+body {
+    background-color:#282C34;
+    color:#EBFFFF;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login {
+    display: flex;
+    width: 100%;
+    background-color: inherit;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-cont {
+    height: fit-content;
+    width: 20%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-cont__submit{
+    background-color: #61DAFB;
+    border: none;
+    padding: 1.5em 3em;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+/*create-task component*/
+.title {
+    font-size: 1.8rem;
+    margin-bottom: 1em;
+}
+label {
+    margin-bottom: .5em;
+}
+
+.create-task {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: inherit;
+    height: 100vh;
+    padding-top: 4em;
+    align-items: center;
+}
+
+input[type='text'], input[type='number'] {
+    border: none;
+    border-radius: 3px;
+    height: 1.5rem;
+}
+
+textarea {
+    border: none;
+    border-radius: 3px;
+    margin-bottom: .5em;
+    min-height: 80px;
+}
+
+.form-cont__task-submit{
+    background-color: #61DAFB;
+    border: none;
+    padding: 1em 2em;
+    font-size: 1rem;
+    cursor: pointer;
+}
