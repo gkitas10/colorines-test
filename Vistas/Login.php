@@ -12,7 +12,7 @@
     <div class="form-cont">
       <form action="https://app.clickup.com/api" method="GET" class='form'>
         <input type="hidden" value="FHBGFIWS2BVFJ4L9BMGVPN0WOOU89R0J" name="client_id">
-        <input type="hidden" value="http://localhost/test/index.php/task/index" name="redirect_uri">
+        <input type="hidden" value="https://colorines-fortest.herokuapp.com/index.php/task/index" name="redirect_uri">
         <input type="submit" value="Log in" class="form-cont__submit">
       </form>
     </div>
