@@ -1,6 +1,4 @@
 <?php
-require_once './controllers/loginController.php';
-
 $__url=explode("/", $_SERVER['REQUEST_URI']);
 
 if(isset($__url[3]) && isset($__url[4])) {
