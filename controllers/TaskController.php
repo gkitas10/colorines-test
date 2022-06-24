@@ -2,7 +2,7 @@
     class TaskController {
         public function index() {
             require_once './Vistas/tasks/create-task.php';
-            require_once './controllers/loginController.php';
+            require_once './controllers/LoginController.php';
             $login = new LoginController();
             if(!isset($_SESSION['access_token'])) {
                 $login->getAccessToken();
