@@ -1,9 +1,9 @@
 <?php
 $__url=explode("/", $_SERVER['REQUEST_URI']);
 
-if(isset($__url[3]) && isset($__url[4])) {
-    $__controller = ucwords($__url[3]) . 'Controller';
-    $__method = explode("?", $__url[4])[0];
+if(isset($__url[2]) && isset($__url[3])) {
+    $__controller = ucwords($__url[2]) . 'Controller';
+    $__method = explode("?", $__url[3])[0];
 }else {
     $__controller = 'LoginController';
     $__method = 'index';
