@@ -14,7 +14,7 @@
             <div class="alert">Tarea creada exitosamente</div>
             <div class="back-cont">
                 <label>Regresar</label>
-                <a href="index" class="arrow"><img src="../../assests/images/Small_arrow_pointing_left.svg"></a>
+                <a href="index" class="arrow"><img src="/assets/images/Small_arrow_pointing_left.svg"></a>
             </div>
         </div>
     </div>
